@@ -1,0 +1,108 @@
+/* Start Landing */
+.landing {
+  position: relative;
+}
+.landing .container {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .landing .text {
+    text-align: center;
+  }
+}
+.landing .text {
+  margin-top: -35px;
+}
+.landing .text h2 {
+  margin: 0;
+  font-size: 4rem;
+  color: var(--main-color);
+}
+.landing .text p {
+  color: var(--main-text-color);
+  max-width: 45ch;
+  margin: 10px 0 20px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+.landing .text .links {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .landing .text .links {
+    justify-content: center;
+  }
+}
+.landing .text .links a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 13px 25px;
+  border-radius: 40px;
+  border: 3px solid var(--main-color);
+}
+.landing .text .links .solid {
+  background-color: var(--main-color);
+  color: white;
+  margin-right: 40px;
+}
+.landing .text .links .regular {
+  color: var(--main-color);
+}
+.landing .image {
+  height: fit-content;
+  margin-top: -60px;
+  margin-left: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.landing .image .social-media {
+  display: flex;
+  flex-direction: column;
+}
+.landing .image .social-media a {
+  margin: 20px 0;
+}
+.landing .image .social-media a {
+  font-size: 18px;
+}
+.landing .image .social-media a:hover {
+  color: var(--main-color);
+}
+@media (max-width: 991px) {
+  .landing .image {
+    display: none;
+  }
+}
+.landing .image::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+  width: 90%;
+  height: 90%;
+  background-color: var(--main-color);
+  z-index: -1;
+  border-radius: 34% 66% 69% 31% / 65% 74% 26% 35%;
+}
+
+.landing .image img {
+  max-width: 100%;
+}
+
+.landing .go-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  animation: bouncing 2s infinite alternate;
+}
+.landing .go-down svg {
+  display: block;
+  margin-bottom: -5px;
+  color: #f78905;
+}
+/* End Landing */

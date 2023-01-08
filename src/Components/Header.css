@@ -1,0 +1,118 @@
+header {
+  position: relative;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+header .container .logo img {
+  width: 100px;
+}
+header .container .links {
+  display: flex;
+}
+header .container .links li {
+  font-size: 1.1rem;
+}
+@media (max-width: 992px) {
+  header .container .links {
+    display: none;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 14px 12px 0 #ddd;
+    transition: top var(--main-transition);
+  }
+
+  header .container .open {
+    display: flex;
+    animation: to-top var(--main-transition) linear forwards;
+    background-color: var(--dark-mode-color);
+    box-shadow: 0 14px 12px 0 #0a0939;
+  }
+  header .container .links li {
+    margin-bottom: 30px;
+  }
+  header .container .links a.login {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  header .container .links a.login i {
+    color: var(--main-color);
+    margin-right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  header .container .links {
+    background-color: var(--dark-mode-color);
+    box-shadow: 0 14px 12px 0 #0a0939;
+  }
+}
+
+header .container .links li {
+  margin-left: 20px;
+}
+header .container .links li a.active {
+  background-color: var(--main-color);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+header .container .search {
+  display: flex;
+  align-items: center;
+}
+header .container .search .mode-toggle {
+  background-color: var(--main-color);
+  padding: 4px 25px;
+  border-radius: 20px;
+  position: relative;
+  height: 25px;
+  transition: background-color var(--main-transition);
+}
+header .container .search .mode-toggle div {
+  position: absolute;
+  right: 28px;
+  width: 17px;
+  height: 17px;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  transition: all var(--main-transition);
+}
+header .container .search a {
+  margin-left: 20px;
+}
+
+header .container .search .login {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+header .container .search .login i {
+  margin-right: 5px;
+}
+header .container .search .bars {
+  display: none;
+}
+@media (max-width: 992px) {
+  header .container .search .login {
+    display: none;
+  }
+  header .container .search .bars {
+    display: block;
+  }
+}

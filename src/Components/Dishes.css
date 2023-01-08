@@ -1,0 +1,61 @@
+.dishes {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.dishes .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px 20px;
+}
+.dishes .container .box {
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  transition: var(--main-transition);
+  background-color: var(--main-dark-bg-section);
+  box-shadow: var(--main-dark-box-shadow);
+}
+.dishes .container .box:hover {
+  transform: translateY(-10px);
+}
+.dishes .container .box::before {
+  content: "Add To Cart";
+  position: absolute;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.dishes .container .box .cart-favorit {
+  display: flex;
+  justify-content: space-between;
+}
+.dishes .container .box .cart-favorit a:hover i {
+  color: var(--main-color);
+}
+.dishes .container .box img {
+  max-width: 100%;
+}
+.dishes .container .box h3 {
+  text-align: center;
+}
+.dishes .container .box .rate-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dishes .container .box .rate-price .rate .solid {
+  color: gold;
+}
+.dishes .container .box .rate-price .rate .regular {
+  color: var(--main-text-color);
+}
+.dishes .container .box .rate-price .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
